@@ -21,7 +21,7 @@ public class DummyPadle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed = Config.newSpeed;
     }
 
     // Update is called once per frame
@@ -32,6 +32,7 @@ public class DummyPadle : MonoBehaviour
         //transform.position = new Vector2(transform.position.x, myBall.position.y);
         //
 
+        //vai se mover com velocidade para a posição Y da bola
         float diference = transform.position.y - myBall.position.y;
         rb2d.velocity = new Vector2(0, -diference * speed);
 
